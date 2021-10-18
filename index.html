@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav.navbar {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            gap: 1rem;
+            position: sticky;
+            top: 0;
+        }
+
+        nav.navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: block;
+            line-height: 200%;
+            padding: 6px 8px;
+
+        }
+
+        nav.navbar a:hover {
+            background-color: rgba(255, 255, 255, .1);
+        }
+
+        section.fh {
+            min-height: 100vh;
+            box-sizing: border-box;
+            padding: 1rem;
+        }
+        section.fh:not(:first-child) > :first-child {
+            margin-top: 2rem;
+        }
+
+        .stack {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        .stack img {
+            margin-top: 1rem;
+            width: auto;
+        }
+
+        a.hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#">HOME</a>
+        <a href="#">WAIFUS</a>
+        <a href="#">JOJO</a>
+        <a href="#">COSA È NODEJS</a>
+    </nav>
+    <section class="fh" id="content">
+        <h1>COSA È NODEJS???</h1>
+        <p>Lick master's hand at first then bite because im moody cat dog hate mouse eat string barf pillow no baths
+            hate everything rub face on everything. Spend all night ensuring people don't sleep sleep all day find empty
+            spot in cupboard and sleep all day. Reward the chosen human with a slow blink. Curl into a furry donut
+            toilet paper attack claws fluff everywhere meow miao french ciao litterbox for i love cats i am one wake up
+            scratch humans leg for food then purr then i have a and relax or sit in window and stare oooh, a bird, yum
+            stare out the window check cat door for ambush 10 times before coming in or gnaw the corn cob. Groom
+            yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of the day -
+            checked find empty spot in cupboard and sleep all day walk on car leaving trail of paw prints on hood and
+            windshield. Sleep over your phone and make cute snoring noises fat baby cat best buddy little guy, so show
+            belly. Jump five feet high and sideways when a shadow moves why use post when this sofa is here. Catty ipsum
+            rub my belly hiss for give me attention or face the wrath of my claws yet scratch the furniture, when owners
+            are asleep, cry for no apparent reason toy mouse squeak roll over so furball roll roll roll. Intently sniff
+            hand somehow manage to catch a bird but have no idea what to do next, so play with it until it dies of shock
+            for headbutt owner's knee so kitty kitty pussy cat doll so my water bowl is clean and freshly replenished,
+            so i'll drink from the toilet. Touch my tail, i shred your hand purrrr cats woo so scratch the furniture.
+        </p>
+    </section>
+    <section class="fh stack" id="ads">
+        <h1>ROBA INTERESSANTE:</h1>
+        <img src="ragno.jpg" alt="">
+        <img src="images.jpg" alt="">
+    </section>
+
+    <script>
+            history.replaceState( null, document.title, location.pathname + "#ads" )
+            history.pushState(null, document.title, location.pathname + "#");
+            history.go(1);
+            window.addEventListener("popstate", function () {
+                console.log( this )
+                setTimeout( () => document.querySelector('#ads').scrollIntoView({
+                    behavior: 'smooth'
+                }) , 0 )
+                
+            }, false);
+        
+    </script>
+</body>
+
+</html>
